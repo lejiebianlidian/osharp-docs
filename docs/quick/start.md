@@ -7,7 +7,7 @@ OSharp 框架使用现在流行的 **前后端分离** 的架构模式，开发�
 后端开发环境指的是 **.NetCore** 的开发环境，涉及到的开发环境为SDK，IDE，数据库等。
 
 #### .NetCore SDK
-OSharp 框架的后端是基于 .NetCore 的最新稳定版本的，目前最新稳定版本为 ![Microsoft.AspNetCore.App](https://img.shields.io/nuget/v/Microsoft.AspNetCore.App.svg)，当 3.0 版本发布稳定版本之后，不出意外 OSharp 会跟随脚步升级到 3.0，所以，请安装最新版本的 SDK。
+OSharp 框架的后端是基于 .NetCore 的最新稳定版本的，目前最新稳定版本为 ![Microsoft.Extensions.Configuration.Binder](https://img.shields.io/nuget/v/Microsoft.Extensions.Configuration.Binder.svg)，请安装最新版本的 SDK。
 最新 SDK 下载地址如下：
 > https://dotnet.microsoft.com/download
 
@@ -17,36 +17,47 @@ OSharp 框架的后端是基于 .NetCore 的最新稳定版本的，目前最新
 安装完成后，在 `命令提示符` 或 `PowerShell` 窗口输入如下命令，即可查看到本机已安装的 .NetCore 的 SDK 和 Runtime 版本详细信息
 > dotnet --info
 
-我的电脑输出如下，可以看到，已经安装了 `2.2.203` 版本的 SDK 和 `2.2.4` 版本的 Runtime：
+我的电脑输出如下，可以看到，已经安装了 `3.0.100` 版本的 SDK 和 `3.0.0` 版本的 Runtime：
 ``` hl_lines="17 20"
 .NET Core SDK（反映任何 global.json）:
- Version:   2.2.203
- Commit:    e5bab63eca
+ Version:   3.0.100
+ Commit:    04339c3a26
 
 运行时环境:
  OS Name:     Windows
- OS Version:  10.0.17763
+ OS Version:  10.0.18362
  OS Platform: Windows
  RID:         win10-x64
- Base Path:   C:\Program Files\dotnet\sdk\2.2.203\
+ Base Path:   C:\Program Files\dotnet\sdk\3.0.100\
 
 Host (useful for support):
-  Version: 2.2.4
-  Commit:  f95848e524
+  Version: 3.0.0
+  Commit:  7d57652f33
 
 .NET Core SDKs installed:
-  2.2.203 [C:\Program Files\dotnet\sdk]
+  2.2.402 [C:\Program Files\dotnet\sdk]
+  3.0.100 [C:\Program Files\dotnet\sdk]
 
 .NET Core runtimes installed:
-  Microsoft.NETCore.App 2.2.4 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.AspNetCore.All 2.1.13 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.All]
+  Microsoft.AspNetCore.All 2.2.7 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.All]
+  Microsoft.AspNetCore.App 2.1.13 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 2.2.7 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 3.0.0 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 2.1.13 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 2.2.7 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 3.0.0 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.WindowsDesktop.App 3.0.0 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
 
 To install additional .NET Core runtimes or SDKs:
   https://aka.ms/dotnet-download
 ```
 
 #### IDE (集成开发环境)
-* Visual Studio 2019：开发 .NET 程序，当前首先宇宙最强IDE **Visual Studio**，.NetCore 2.2 的可用VS版本为 VS2017 和 VS2019，推荐使用最新版本的 VS2019。
-* Visual Studio Code：如果你觉得VS太过笨重，喜欢比较轻量级的IDE，VS Code 也是个很不错的选择，只需装上 `C#` 插件即可完美运行 .NetCore 代码。VS Code 也是目前最好用的前端IDE，后面将作为前端IDE进行前端代码的开发。
+* Visual Studio 2019：开发 .NET 程序，当前首先宇宙最强IDE **Visual Studio**，
+    * .NetCore 2.2 的可用VS版本为 VS2017 和 VS2019，推荐使用 VS2019。 
+    * .NetCore 3.0 则要求VS版本为 VS2019 16.3+ ，推荐将VS2019更新至最新版本。
+* Visual Studio Code：如果你觉得VS太过笨重，喜欢比较轻量级的IDE，VS Code 也是个很不错的选择，只需装上 `C#` 插件即可完美运行 .NetCore 代码。VS Code 也是目前最好用的前端IDE，后面将作为前端IDE进行前端代码的开发与运行。
 
 两个IDE都可以在如下的地址中下载：
 > https://visualstudio.microsoft.com/zh-hans/downloads/
